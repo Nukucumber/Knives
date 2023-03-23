@@ -1,0 +1,56 @@
+		.grid_container_table_knife
+			display grid
+			grid-gap 10px
+			set_size(100%, auto, 0)
+
+			form
+				set_size(100%, 0, 0)
+				border-radius 4px
+
+
+				input, select
+					set_size(auto, 5px , 0)
+					background-color #A3A3A3
+					border-radius 4px
+
+			.grid_container_form1
+				display grid
+				grid-row-gap 2px
+
+				align-items: space-between
+
+				.f1
+					set_position(1, 2, 1, 2)
+					border-left gray thin solid
+					border-top gray thin solid
+					border-bottom gray thin solid
+
+				.f2
+					set_position(2, 3, 1, 2)
+					border-right gray thin solid
+					border-top gray thin solid
+					border-bottom gray thin solid
+
+				.f3
+					set_position(1, 2, 2, 4)
+				.f4
+					set_position(1, 2, 4, 5)
+				.f5
+					set_position(2, 3, 2, 3)
+				.f6
+					set_position(2, 3, 3, 4)
+				.f7
+					set_position(2, 3, 4, 5)
+			table
+				border gray solid medium
+
+	@media (max-width 600px)
+		.main
+			font-size 12px
+			line-height 1.5
+			set_size(100%, 0, 20px)
+			min-width 0
+
+			nav
+				ul
+					flex-wrap: wrap

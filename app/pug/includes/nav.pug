@@ -1,0 +1,10 @@
+nav 
+	ul
+		each key, value in {"Самый просматриваемый нож": "famous_knife", "Главная": "index", "Сравнительная таблица": "table_knife"}
+			if key == active_page
+				li(class="active")
+					a(href = key + ".html")= value
+			else 
+				li
+					a(href=key + ".html")= value
+	hr

@@ -1,0 +1,435 @@
+extends template
+block variables 
+	-var active_page = "table_knife"
+	-var title = "table_knife"
+	-var navigation_reflist = {"Самый просматриваемый нож": "famous_knife", "Главная": "index", "Сравнительная таблица": "table"}
+	-var reflist = {}
+	-var textlist = []
+	-var imglist = []
+	-var videolist = []
+block header 
+	header 
+		h2 #[i Knives guide - расскажет и покажет всё необходимое, что нужно знать о ножах]
+		hr
+block content 
+	.form1
+		details
+			summary Построение графика
+			form.grid_container_form1
+				.f1 Значениe по оси OX
+				.f2 Результат
+				
+				.f3 #[input(type="radio" name="abс" value="0")] Материал рукоядки
+				.f4 #[input(type="radio" name="abс" value="1")] Материал лезвия
+				.f5 #[input(type="checkbox" name="val" value="0")] Минимальная длина лезвия #[br]		 
+				.f6 #[input(type="checkbox" name="val" value="1")] Минимальная ширина лезвия #[br]
+				.f7 #[input(type="checkbox" name="val" value="1")] Средняя цена #[br]
+				input(type="submit" value="Построить график")
+		details
+			summary Сортировка
+			form
+				select(name="sortFirst")
+					option( value="0") Материал рукоядки
+					option( value="1") Материал лезвия
+					option( value="2") Длина лезвия
+					option( value="3") Ширина лезвия
+					option( value="4") Средняя цена
+				input(type="submit" value="Сортировка 1-ый уровень")
+			form
+				select(name="sortSecond")
+					option(value="0") Материал рукоядки
+					option(value="1") Материал лезвия
+					option(value="2") Длина лезвия
+					option(value="3") Ширина лезвия
+					option(value="4") Средняя цена
+				input(type="submit" value="Сортировка 2-ой уровень")
+			form
+				select(name="sortThird")
+					option(value="0") Материал рукоядки
+					option(value="1") Материал лезвия
+					option(value="2") Длина лезвия
+					option(value="3") Ширина лезвия
+					option(value="4") Средняя цена
+				input(type="submit" value="Сортировка 3-ий уровень")
+		details
+			summary Фильтр
+			form
+					label(for="Model") Модель
+					br
+					input(type="text" name="Model")
+					br
+					label(for="Spec") Материал рукоядки
+					br
+					input(type="text" name="Spec")
+					br
+					label(for="Alloy") Материал (сплав)
+					br
+					input(type="text" name="Alloy")
+					br
+					label(for="length") Длина лезвия
+					p От #[input(type="text" name="lengthPre")] до #[input(type="text" name="lengthTo")]
+					
+					label(for="width") Ширина лезвия
+					p От #[input(type="text" name="widthPre")] до #[input(type="text" name="widthTo")]
+
+					label(for="cost") Средняя стоимость
+					p От #[input(type="text" name="costPre")] до #[input(type="text" name="costTo")]
+					input(type="submit" value="Поиск")
+		table(border="3" cellpadding="5" cellspacing="0")
+			tr
+				td Модель
+				td Материал рукоядки
+				td Материал лезвия
+				td Длина лезвия
+				td Ширина лезвия
+				td Стоимость
+			tr
+				td knife #17409
+				td steel
+				td ey517dx264
+				td 173
+				td 22
+				td 1712
+			tr
+				td knife #16857
+				td wood
+				td uwn431sr4
+				td 131
+				td 53
+				td 7198
+			tr
+				td knife #74277
+				td steel
+				td ry502cy
+				td 162
+				td 24
+				td 978
+			tr
+				td knife #65090
+				td plastic
+				td fmnm066vw
+				td 59
+				td 66
+				td 653
+			tr
+				td knife #78829
+				td plastic
+				td tsy636dp
+				td 92
+				td 50
+				td 6159
+			tr
+				td knife #73726
+				td wood
+				td u754bo0
+				td 144
+				td 46
+				td 3760
+			tr
+				td knife #71777
+				td plastic
+				td j998py60
+				td 188
+				td 70
+				td 10921
+			tr
+				td knife #25094
+				td plastic
+				td j120va0
+				td 41
+				td 58
+				td 1529
+			tr
+				td knife #84143
+				td steel
+				td o877kv
+				td 103
+				td 37
+				td 2751
+			tr
+				td knife #07349
+				td plastic
+				td f996wn
+				td 28
+				td 44
+				td 10939
+			tr
+				td knife #92553
+				td wood
+				td bngo681ly7
+				td 42
+				td 68
+				td 1622
+			tr
+				td knife #89078
+				td plastic
+				td iti586yy3
+				td 162
+				td 54
+				td 1746
+			tr
+				td knife #18211
+				td plastic
+				td gb200vl8
+				td 209
+				td 75
+				td 5753
+			tr
+				td knife #25258
+				td steel
+				td tsw969co59
+				td 132
+				td 55
+				td 7390
+			tr
+				td knife #83939
+				td steel
+				td xr935vg5
+				td 102
+				td 75
+				td 4064
+			tr
+				td knife #41616
+				td plastic
+				td t328mp6
+				td 178
+				td 66
+				td 6312
+			tr
+				td knife #14629
+				td steel
+				td oob934ya93
+				td 42
+				td 78
+				td 3348
+			tr
+				td knife #75812
+				td steel
+				td uge930zj7
+				td 90
+				td 23
+				td 2998
+			tr
+				td knife #25203
+				td steel
+				td rzau132hh1
+				td 162
+				td 12
+				td 9616
+			tr
+				td knife #40703
+				td plastic
+				td y310un0
+				td 114
+				td 45
+				td 10954
+			tr
+				td knife #95648
+				td steel
+				td cz484hm
+				td 107
+				td 60
+				td 2256
+			tr
+				td knife #07056
+				td plastic
+				td ine774zr80
+				td 182
+				td 63
+				td 2926
+			tr
+				td knife #71554
+				td steel
+				td e611pp04
+				td 183
+				td 50
+				td 10181
+			tr
+				td knife #29038
+				td steel
+				td heru478bp0
+				td 48
+				td 53
+				td 5714
+			tr
+				td knife #50145
+				td steel
+				td wd667yt1
+				td 181
+				td 26
+				td 2352
+			tr
+				td knife #72765
+				td plastic
+				td bpo532wq2
+				td 189
+				td 72
+				td 3293
+			tr
+				td knife #73157
+				td wood
+				td qql595xi4
+				td 203
+				td 60
+				td 6728
+			tr
+				td knife #91347
+				td plastic
+				td rrs031rz27
+				td 98
+				td 12
+				td 7773
+			tr
+				td knife #63035
+				td plastic
+				td mipp850xp5
+				td 134
+				td 41
+				td 5070
+			tr
+				td knife #48592
+				td wood
+				td nh827zu71
+				td 60
+				td 33
+				td 7504
+			tr
+				td knife #17533
+				td steel
+				td ld874no07
+				td 123
+				td 21
+				td 993
+			tr
+				td knife #63019
+				td wood
+				td kj482wl92
+				td 67
+				td 14
+				td 2978
+			tr
+				td knife #14355
+				td plastic
+				td kaxg058ey3
+				td 92
+				td 72
+				td 3417
+			tr
+				td knife #03133
+				td plastic
+				td h583xi7
+				td 83
+				td 19
+				td 5011
+			tr
+				td knife #82801
+				td wood
+				td koz087mj6
+				td 58
+				td 63
+				td 3959
+			tr
+				td knife #48397
+				td steel
+				td fs551hg
+				td 135
+				td 54
+				td 1672
+			tr
+				td knife #53268
+				td steel
+				td upx253du
+				td 161
+				td 24
+				td 6324
+			tr
+				td knife #62682
+				td plastic
+				td n151ha04
+				td 173
+				td 76
+				td 2782
+			tr
+				td knife #82343
+				td plastic
+				td iwbe088ab469
+				td 181
+				td 79
+				td 3278
+			tr
+				td knife #23402
+				td plastic
+				td zfz351kq39
+				td 158
+				td 77
+				td 6740
+			tr
+				td knife #14819
+				td steel
+				td xjk475lp9
+				td 108
+				td 22
+				td 2284
+			tr
+				td knife #50440
+				td steel
+				td p908li2
+				td 109
+				td 13
+				td 10338
+			tr
+				td knife #10338
+				td plastic
+				td ynfn585ed8
+				td 113
+				td 76
+				td 8410
+			tr
+				td knife #69789
+				td steel
+				td he667rw
+				td 106
+				td 11
+				td 992
+			tr
+				td knife #14952
+				td plastic
+				td v231ww27
+				td 32
+				td 76
+				td 4960
+			tr
+				td knife #49460
+				td plastic
+				td gvo214hc42
+				td 99
+				td 48
+				td 4753
+			tr
+				td knife #86986
+				td steel
+				td jk275na70
+				td 20
+				td 78
+				td 10129
+			tr
+				td knife #28205
+				td wood
+				td zpht095iv
+				td 160
+				td 30
+				td 4477
+			tr
+				td knife #25521
+				td plastic
+				td gkrz515po0
+				td 84
+				td 37
+				td 7292
+			tr
+				td knife #14990
+				td wood
+				td h076he649
+				td 125
+				td 47
+				td 10334

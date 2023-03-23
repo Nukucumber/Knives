@@ -1,0 +1,21 @@
+extends template
+block variables 
+	-var active_page = "index"
+	-var title = "index"
+	-var reflist = {"Советские штык-ножи для АК И АКМ": "famous_knife", "Нож таежного охотника": "#", "Охотничий нож акула": "#", "Складной нож Пират": "#", "Метательные ножи Кунай": "#", "Нож грибника": "#"}
+	-var textlist = []
+	-var imglist = ["img/shtyk-noj-ak-47.jpg", "img/noj-taejnogo-ohotnika.jpg", "img/ohotnichiiy-noj-akula.jpg", "img/skladnoiy-noj-pirat.jpg", "img/metatelnye-noji-kunaiy.jpg", "img/mushroom_picker's_knives.jpg"]
+	-var videolist = []
+block header 
+	header 
+		h2 #[i Knives guide - расскажет и покажет всё необходимое, что нужно знать о ножах]
+		hr
+block content 
+	.text1 
+		p Мы расскажем Вам:
+		ul 
+			li о классификации ножей
+			li о материалах ножей
+			li об их истории
+			li об их возможностях
+		h3 Часто просматриваемые ножи
